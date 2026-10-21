@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Arsalan Ahmed | SEO Specialist in karachi</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<meta name="google-site-verification" content="n42EQfBHgYgmTRmH4l6IPSYzcyVavqZSl17qqEQJeRw" />
+<title>Arsalan Ahmed | SEO Specialist in Karachi</title>
 <meta name="description" content="Arsalan Ahmed - Top SEO specialist in Karachi. 6+ years of experience in technical SEO, local SEO, Google Merchant Center, and ranking health & beauty brands #1 on Google.">
 <meta name="keywords" content="SEO specialist in Karachi, Best SEO expert in Karachi, Local SEO services Karachi, E-commerce SEO specialist, Shopify SEO Pakistan, Google Merchant Center expert, Technical SEO Karachi">
-<link  rel="canonical" ref="https://batmanwillarrive-lang.github.io/Arsalan-seo-client-portfolio/" />
-  <script type="application/ld+json">
+<meta name="google-site-verification" content="n42EQfBHgYgmTRmH4l6IPSYzcyVavqZSl17qqEQJeRw">
+<link rel="canonical" href="https://batmanwillarrive-lang.github.io/Arsalan-seo-client-portfolio/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arsalan Ahmed | SEO Specialist in Karachi">
+<meta property="og:description" content="6+ years of technical, local and e-commerce SEO. Real results from health and beauty brands.">
+<meta property="og:url" content="https://batmanwillarrive-lang.github.io/Arsalan-seo-client-portfolio/">
+
+<link rel="preload" as="image" href="profile.png" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -44,7 +54,7 @@ a{color:inherit}
 .d{font-family:'Bebas Neue','Arial Narrow',Impact,sans-serif;font-weight:400;line-height:.95;letter-spacing:.01em}
 .card{max-width:1280px;margin:clamp(0px,3vw,36px) auto;background:var(--ink);border-radius:26px;overflow:clip;position:relative}
 .w{padding:0 clamp(20px,4vw,48px)}
-a:focus-visible{outline:2px solid var(--or2);outline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--or2);outline-offset:3px}
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--or);color:#fff;padding:13px 24px;border-radius:99px;text-decoration:none;font-weight:700;font-size:15px;transition:transform .2s,background .2s}
 .btn:hover{background:var(--or2);color:#1b0d04;transform:translateY(-2px)}
@@ -75,6 +85,10 @@ a:focus-visible{outline:2px solid var(--or2);outline-offset:3px}
 .mini div{background:rgba(0,0,0,.3);border-radius:12px;padding:12px}
 .mini b{font:400 2rem/1 'Bebas Neue',sans-serif;display:block;color:var(--or2)}.mini small{color:var(--mut);font-size:13px}
 .srn{font-size:12.5px;color:var(--mut);margin-top:14px}
+/* hero portrait */
+.side{display:flex;flex-direction:column;gap:18px}
+.me{position:relative;margin:clamp(24px,4vw,48px) auto 0;width:min(340px,100%);aspect-ratio:1/1;border-radius:24px;overflow:hidden;border:2px solid var(--or2);box-shadow:0 18px 50px rgba(242,106,33,.35);background:#e4e4e4}
+.me img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
 /* marquee */
 .mq{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--card)}
 .mq div{display:flex;width:max-content;animation:mv 34s linear infinite}
@@ -104,7 +118,7 @@ a:focus-visible{outline:2px solid var(--or2);outline-offset:3px}
 .note{font-size:14px}
 .proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:24px}
 .ph{aspect-ratio:16/10;border:1px solid rgba(255,255,255,.18);border-radius:12px;overflow:hidden;background:rgba(0,0,0,.4)}
-.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.3s ease}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease;cursor:zoom-in}
 .ph:hover img{transform:scale(1.04)}
 .proof figure{margin:0}.proof figcaption{font-size:13px;color:var(--mut);margin-top:8px}
 /* services */
@@ -120,7 +134,13 @@ a:focus-visible{outline:2px solid var(--or2);outline-offset:3px}
 .ct p{color:var(--mut);margin:20px 0 32px;position:relative}
 .ct .btns{justify-content:center;position:relative}
 footer{padding:22px;text-align:center;color:var(--mut);font-size:14px;border-top:1px solid var(--line);position:relative}
-@media(max-width:820px){.hg,.about,.case,.two{grid-template-columns:1fr}.pill a:not(:first-child){display:none}.case{gap:20px}}
+/* image zoom (lightbox) */
+.lb{position:fixed;inset:0;z-index:999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.92);cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{max-width:96vw;max-height:90vh;object-fit:contain;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lb button{position:absolute;top:16px;right:20px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:28px;line-height:1;cursor:pointer}
+.lb button:hover{background:var(--or)}
+@media(max-width:820px){.me{width:min(300px,80%)}.hg,.about,.case,.two{grid-template-columns:1fr}.pill a:not(:first-child){display:none}.case{gap:20px}}
 @media(max-width:560px){.card{border-radius:0;margin:0}.pill{display:none}}
 @media(prefers-reduced-motion:reduce){.name{animation:none}.mq div{animation:none}html{scroll-behavior:auto}}
 </style></head><body>
@@ -129,14 +149,16 @@ footer{padding:22px;text-align:center;color:var(--mut);font-size:14px;border-top
 <nav class="nav"><b>ARSALAN AHMED</b><div class="pill"><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a></div><a class="btn" href="#contact">Get in touch</a></nav>
 <p class="hi">Hi, I’m</p>
 <h1 class="name d">Arsalan Ahmed</h1>
+<figure class="me"><img src="profile.png" alt="Arsalan Ahmed, SEO specialist in Karachi" width="287" height="288" fetchpriority="high"></figure>
 <div class="hg"><div>
 <h2 class="d">SEO that gets health and beauty brands found on Google</h2>
 <p>For 6+ years I have worked on on-page, technical, off-page and local SEO, plus content optimization and Google Shopping. Everything below is real work from brands I handle right now.</p>
 <div class="btns"><a class="btn" href="#work">View my work</a><a class="btn o" href="#contact">Free site review</a></div></div>
+<div class="side">
 <aside class="serp" aria-label="Example result"><div class="q">hakeem ibrahim karachi</div>
 <div class="res"><span class="rank">#1</span><div><b>Dr Ibrahim Herbalist</b><small>doctoribrahim.com</small></div></div>
 <div class="mini"><div><b>73</b><small>profile interactions</small></div><div><b>31</b><small>calls from Google</small></div></div>
-<p class="srn">A current client, Aug–Sep 2026.</p></aside></div>
+<p class="srn">A current client, Aug–Sep 2026.</p></aside></div></div>
 </header>
 
 <div class="mq" aria-hidden="true"><div>
@@ -159,8 +181,8 @@ footer{padding:22px;text-align:center;color:var(--mut);font-size:14px;border-top
 <p class="note">Profile activity was zero from April to July 2026. In August and September it reached 73 interactions and 31 calls.</p>
 <div class="proof">
 <figure><div class="ph"><img src="download.jpg" alt="Google search result for Dr Ibrahim Herbalist" loading="lazy"></div><figcaption>Website ranks first, Maps listing right below.</figcaption></figure>
-<figure><div class="ph"><img src="download (1).jpg" alt="Business Profile interactions graph showing 73 interactions" loading="lazy"></div><figcaption>Business Profile interactions, Apr to Sept 2026.</figcaption></figure>
-<figure><div class="ph"><img src="download (2).jpg" alt="Calls made from Business Profile showing 31 calls" loading="lazy"></div><figcaption>Calls made from the Business Profile.</figcaption></figure>
+<figure><div class="ph"><img src="download%20(1).jpg" alt="Business Profile interactions graph showing 73 interactions" loading="lazy"></div><figcaption>Business Profile interactions, Apr to Sept 2026.</figcaption></figure>
+<figure><div class="ph"><img src="download%20(2).jpg" alt="Calls made from Business Profile showing 31 calls" loading="lazy"></div><figcaption>Calls made from the Business Profile.</figcaption></figure>
 </div>
 </div></article>
 
@@ -171,9 +193,9 @@ footer{padding:22px;text-align:center;color:var(--mut);font-size:14px;border-top
 <div class="stats"><div><b>8,677</b><small>sessions</small></div><div><b>4,205</b><small>from organic search</small></div><div><b>3,538</b><small>from Google Shopping</small></div><div><b>62%</b><small>engagement rate</small></div></div>
 <p class="note">Search Console shows 28K impressions at an average position of 5.3. Merchant Center shows 8.42K clicks across 795 products.</p>
 <div class="proof">
-<figure><div class="ph"><img src="download (3).jpg" alt="GA4 Traffic acquisition report showing 8,677 sessions" loading="lazy"></div><figcaption>Search and Shopping bring 89% of sessions.</figcaption></figure>
-<figure><div class="ph"><img src="download (4).jpg" alt="Google Merchant Center showing 8.42K clicks and 795 products" loading="lazy"></div><figcaption>8.42K clicks, 795 products.</figcaption></figure>
-<figure><div class="ph"><img src="download (5).jpg" alt="Search Console showing 28K impressions and 5.3 position" loading="lazy"></div><figcaption>28K impressions, average position 5.3.</figcaption></figure>
+<figure><div class="ph"><img src="download%20(3).jpg" alt="GA4 Traffic acquisition report showing 8,677 sessions" loading="lazy"></div><figcaption>Search and Shopping bring 89% of sessions.</figcaption></figure>
+<figure><div class="ph"><img src="download%20(4).jpg" alt="Google Merchant Center showing 8.42K clicks and 795 products" loading="lazy"></div><figcaption>8.42K clicks, 795 products.</figcaption></figure>
+<figure><div class="ph"><img src="download%20(5).jpg" alt="Search Console showing 28K impressions and 5.3 position" loading="lazy"></div><figcaption>28K impressions, average position 5.3.</figcaption></figure>
 </div>
 </div></article>
 
@@ -184,8 +206,8 @@ footer{padding:22px;text-align:center;color:var(--mut);font-size:14px;border-top
 <div class="stats"><div><b>~100K</b><small>monthly searches for this keyword</small></div><div><b>257</b><small>clicks in 3 months</small></div><div><b>2.32K</b><small>impressions</small></div><div><b>11.1%</b><small>click-through rate</small></div></div>
 <p class="note">Search Console, 26 Jun to 24 Sep 2026: 11.1% CTR and an average position of 10.9 across all queries.</p>
 <div class="proof">
-<figure><div class="ph"><img src="download (6).jpg" alt="Google Search ranking #4 for digital commerce solutions" loading="lazy"></div><figcaption>Ranking 4th for a keyword with about 100K searches.</figcaption></figure>
-<figure><div class="ph"><img src="download (7).jpg" alt="Search Console clicks and impressions performance graph" loading="lazy"></div><figcaption>Clicks and impressions, last 3 months.</figcaption></figure>
+<figure><div class="ph"><img src="download%20(6).jpg" alt="Google Search ranking #4 for digital commerce solutions" loading="lazy"></div><figcaption>Ranking 4th for a keyword with about 100K searches.</figcaption></figure>
+<figure><div class="ph"><img src="download%20(7).jpg" alt="Search Console clicks and impressions performance graph" loading="lazy"></div><figcaption>Clicks and impressions, last 3 months.</figcaption></figure>
 </div>
 </div></article>
 </div></section>
@@ -198,4 +220,25 @@ footer{padding:22px;text-align:center;color:var(--mut);font-size:14px;border-top
 <div class="btns"><a class="btn" href="mailto:arsalanahmed951@gmail.com?subject=SEO%20inquiry">Email me</a><a class="btn g" href="https://wa.me/923122002042?text=Hi%20Arsalan%2C%20I%20saw%20your%20SEO%20portfolio" target="_blank" rel="noopener">Chat on WhatsApp</a></div></section>
 <footer>© 2026 Arsalan Ahmed</footer>
 </main>
+
+<script>
+(function(){
+  var lb=document.createElement('div');
+  lb.className='lb';
+  lb.setAttribute('role','dialog');
+  lb.setAttribute('aria-label','Image preview');
+  lb.innerHTML='<button type="button" aria-label="Close">&times;</button><img alt="">';
+  document.body.appendChild(lb);
+  var big=lb.querySelector('img');
+  document.querySelectorAll('.ph img').forEach(function(i){
+    i.addEventListener('click',function(){
+      big.src=i.currentSrc||i.src;
+      big.alt=i.alt;
+      lb.classList.add('on');
+    });
+  });
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+})();
+</script>
 </body></html>
